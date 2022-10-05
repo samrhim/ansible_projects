@@ -1,10 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
 Vagrant.configure("2") do |config|
   
   # config.vm.box = "gusztavvargadr/windows-10"
@@ -28,7 +24,7 @@ Vagrant.configure("2") do |config|
     end
 
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "getPSversion.yaml"
+    ansible.playbook = "whoami.yaml"
     ansible.inventory_path = "inventory"
     ansible.verbose        = true
   end
