@@ -1,0 +1,12 @@
+[wins]
+srv  ansible_host=192.168.10.12
+
+[wins:vars]
+inventory=inventory
+ansible_user=vagrant
+ansible_password=vagrant
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_port: 5986
+ansible_winrm_scheme: https
+# The following is necessary for Python 2.7.9+ when using default WinRM self-signed certificates:

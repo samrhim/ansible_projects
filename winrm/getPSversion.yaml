@@ -1,0 +1,10 @@
+---
+- hosts: wins
+
+  tasks:
+  # - name: Test the PsExec connection to win-serv
+  #   community.windows.win_psexec:
+  #     command: whoami.exe
+  - name: Run the 'whoami' executable with the '/all' argument
+    ansible.windows.win_command:
+      cmd: whoami.exe /all
